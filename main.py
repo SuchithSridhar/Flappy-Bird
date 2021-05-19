@@ -1,15 +1,10 @@
 '''Author : Suchith Sridhar
-Last edited : 7/9/2018
+Last edited : 2018/09/07
+Clean up on: 2021/05/19
 Python Version coded with : 3.6 x64bit
 program : Flappy Bird Game'''
 
 #READ !!!!
-
-'''press space to move the bird
-
-note: I'm still working on the collision part of the game so its
-still incomplete ill send the game again once its been completed'''
-
 
 import pygame
 import time
@@ -26,7 +21,7 @@ bird_speed_up = -9
 bird_velocity = 0
 
 dirs = os.getcwd()
-dirs = os.path.join(dirs, 'save_files')
+dirs = os.path.join(dirs, 'res')
 os.chdir(dirs)
 sys.path.append(dirs)
 
