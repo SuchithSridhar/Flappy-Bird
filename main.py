@@ -336,39 +336,47 @@ def gameloop(dis_width, dis_height, speed, bird_speed, bird_speed_up):
         if x_wall_check:
             if x_bird>x_wall+100:
                 count += 1
-                x_wall_check = False
         if x_wall2_check:
             if x_bird>x_wall2+100:
                 count += 1
-                x_wall2_check = False
         if x_wall3_check:
             if x_bird>x_wall3+100:
                 count += 1
-                x_wall3_check = False
         if x_wall4_check:
             if x_bird>x_wall4+100:
                 count += 1
-                x_wall4_check = False
             
-        
-
         if x_wall < -199 :
             x_wall = 1000
-            x_wall_check = True
 
         if x_wall2 < -199 :
             x_wall2 = 1000
-            x_wall2_check = True
 
         if x_wall3 < -199 :
             x_wall3 = 1000
-            x_wall2_check = True
 
         if x_wall4 < -199 :
             x_wall4 = 1000
-            x_wall2_check = True
 
+        if x_wall < x_bird - 100:
+           x_wall_check = False 
+        if x_wall > x_bird + 100:
+           x_wall_check = True 
 
+        if x_wall2 < x_bird - 100:
+           x_wall2_check = False 
+        if x_wall2 > x_bird + 100:
+           x_wall2_check = True 
+
+        if x_wall3 < x_bird - 100:
+           x_wall3_check = False 
+        if x_wall3 > x_bird + 100:
+           x_wall3_check = True 
+
+        if x_wall4 < x_bird - 100:
+           x_wall4_check = False 
+        if x_wall4 > x_bird + 100:
+           x_wall4_check = True 
 
         bird(x_bird, y_bird)
         things_dodged(count)
